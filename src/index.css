@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900,300,500,600|Work+Sans:500|Noto+Sans:600");
+
+:root {
+  --primary-color: #cb9b51;
+  --primary-btn-color: #3ba246;
+  --secondary-btn-color: #cb9b51;
+  --background-color: #1a1919;
+  --header-background-color: #242424;
+  --primary-font-color: #fff;
+  --secondary-font-color: #3ba246;
+  --overlay-color: rgba(36, 36, 36, 0.9);
+  --menu-speed: 0.75s;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat';
+  background-color: var(--background-color);
+  color: var(--primary-font-color);
+  line-height: 1.6;
+}
+
+.header {
+  height: 80px;  
+  width: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  position: fixed; 
+  z-index: 3; 
+  top: 0; 
+  left: 0; 
+  background-color: var(--header-background-color); 
+  transition: .5s ease; 
+  overflow-x: hidden;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left, .header-right {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+}
+
+.header-left > a {
+  display: flex;
+  justify-content: center;
+}
+
+.header-left > a > img {
+  height: 54px;
+  width: 61px;
+  margin-left: 3rem;
+}
+
+.header-right > div {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.header-right > div > img {
+  height: 40px;
+  width: 40px;
+  margin-right: 0.5rem;
+}
+
+.header-right > .btn-app {
+  font-size: large;
+  margin-right: 3rem;
+}
+
+.btn-app {
+  background-color:#242424; 
+  color: var(--primary-font-color);
+  border: solid var(--primary-btn-color);
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  min-width: 180px;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.btn-app.solid {
+  background-color: var(--primary-btn-color); 
+}
+
+.btn-app.solid.secondary {
+  background-color: var(--secondary-btn-color);
+}
+
+.btn-app.secondary {
+  border: solid var(--secondary-btn-color);
+}
+
+.btn-app.secondary:hover {
+  background-color: var(--secondary-btn-color);
+}
+
+.btn-app:hover {
+  background-color: var(--primary-btn-color);
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  height: 40px;
+  width: 50px;
+  margin-left: 3rem;
+  display: none;
+  transition: all 0.4s ease;
+}
+
+.checked.hamburger-menu {
+  transform: rotate(180deg);
+}
+
+.hamburger-menu.checked {
+  display: inline;
+}
+
+.header.checked > .header-right, .header.checked > .sidenav {
+  display: none;
+}
+
+.header.checked > .header-left > img {
+  height: 54px;
+  width: 61px;
+  position: absolute;
+  top: 15px;
+  left: 45%;
+  margin-left: 0rem;
+}
+
+.sidenav > a:not(.btn-app):hover {
+  color: var(--primary-color);
+}
+
+.sidenav {
+  height: 100%;  
+  width: 12vw; 
+  min-width: 120px;
+  max-width: 150px;
+  border-right: 1px solid var(--primary-color); 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0; 
+  background-color: var(--header-background-color); 
+  transition: .5s ease; 
+  overflow-x: hidden; 
+  padding-top: 100px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.sidenav > a, .sidenav > h3 {
+  font-size: 16px;
+  color: var(--primary-font-color);
+  cursor: pointer;
+  text-decoration: none;
+  margin: 1rem 0rem;
+  text-align: center;
+}
+
+.sidenav > .pools-logo {
+  height: 100px;
+  width: 100px;
+}
+
+.sidenav > .btn-app {
+  margin: 0.5rem 1rem;
+  width: 10vw;
+  min-width: 60px;
+  max-width: 100px;
+  height: 50px;
+}
+
+.footer { 
+  background-color: var(--header-background-color); 
+  width: calc(100%-min(max(12vw, 100px), 150px));
+  margin-left: min(max(12vw, 100px), 150px);
+  margin-top: 120px;
+  border-top: 1px solid var(--primary-color);
+  z-index: 2; 
+  transition: .5s ease; 
+  overflow-x: hidden;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 30px 6rem 5px 50px;
+  justify-content: space-around;
+}
+
+.footer-text-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-text-title {
+  font-size: 2rem;
+}
+
+.footer-text-body {
+  font-size: 1.1rem;
+  margin: 10px 0px;
+}
+
+.footer-text-group > .social-media-group {
+  margin-left: -2rem;
+}
+
+.footer-subscribe-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-subscribe-line {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0px;
+}
+
+.input-email {
+  border: 3px solid var(--primary-font-color);
+  border-radius: 7px;
+  height: 50px;
+  flex: 2;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.input-email:focus {
+  outline: none !important;
+  border: 3px solid var(--primary-btn-color);
+  box-shadow: 0 0 10px var(--primary-btn-color);
+}
+
+.btn-subscribe {
+  flex: 1;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-secured-by {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-icon {
+  height: 25px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.footer-logo {
+  height: 55px;
+  width: 150px;
+  margin-left: 10px;
+}
+
+.social-media-group {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-media-icon {
+  margin: 0.6rem 0.6rem 0px 0.6rem;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.footer-text-group > .social-media-group {
+  margin: 0px 4rem 0px 1rem;
+}
+
+.btn-expand:hover {
+  transform: scale(1.1);
+}
+
+.social-media-group > .btn-expand:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1040px) {
+  .footer-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-text-title, .footer-text-body {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: inline;
+  }
+
+  .header-right, .sidenav {
+    display: none;
+  }
+
+  .header-left > a {
+    height: 54px;
+    width: 61px;
+    position: absolute;
+    top: 15px;
+    left: 45%;
+    margin-left: 0rem;
+  }
+
+  .footer {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .footer-cta {
+    margin: 0px;
+  }
+
+  .footer-subscribe-group > h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1620px) {
+  .sidenav {
+    width: 200px;
+  }
+}

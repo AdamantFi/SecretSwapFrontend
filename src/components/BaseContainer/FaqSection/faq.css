@@ -1,0 +1,122 @@
+@import url(/src/index.css);
+
+.faq {
+  margin: 120px 4vw 40px 15vw;
+}
+
+.faq > div:not(.faq-sections) {
+  margin: 20px 0px 60px 0px;
+  scroll-margin-top: 80px;
+}
+
+.faq > div:not(.faq-sections) > h1 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+/* .faq > div:not(.faq-sections) > h1 span {
+  position: absolute; 
+  top: -200px;
+} */
+
+.faq-sections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-sections > a {
+  font-size: 36px;
+  color: var(--primary-font-color);
+  cursor: pointer;
+  text-decoration: none;
+  margin: 1rem 1rem;
+  text-align: center;
+  padding-right: 2rem;
+}
+
+.faq-sections > a:not(.lastSection) {
+  border-right: 2px solid #fff;
+}
+
+.faq-sections > a:not(.btn-app):hover {
+  color: var(--primary-color);
+}
+
+.faq-input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px -2px var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: var(--header-background-color);
+  font-weight: bold;
+  cursor: pointer;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  font-size: 20px;
+}
+    /* Icon */
+.tab-label:hover {
+  background: lighten(var(--header-background-color), 30%);
+  cursor: pointer;
+}
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all .35s;
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: var(--primary-font-color);
+  background: var(--header-background-color);
+  transition: all .35s;
+  font-size: 18px;
+}
+
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: lighten(var(--header-background-color), 30%);
+  cursor: pointer;
+}
+
+.tab-close:hover {
+  background: lighten(var(--header-background-color), 30%);
+}
+
+.faq-input:checked + .tab-label {
+  background: lighten(var(--header-background-color), 30%);
+}
+
+.faq-input:checked + .tab-label::after  {
+  transform: rotate(90deg);
+}
+
+.faq-input:checked ~ .tab-content  {
+  max-height: 100vh;
+  padding: 1em;
+}
