@@ -1,5 +1,3 @@
-import * as agent from 'superagent';
-import { BigNumber } from 'bignumber.js';
 import axios from 'axios';
 import numeral from 'numeral'
 
@@ -61,64 +59,49 @@ const getPercentageFormat = (number) => {
 }
 
 const getRewardsInfo = async (params) => {
-  const dateTime = new Date().getTime();
-  const url = 'https://api-bridge-mainnet.azurewebsites.net/rewards?time=' + dateTime;
-  const res = await agent.get(url, params);
-  const content = res.body.pools;
-  return { ...res.body, content };
+  const fetcherConfigs = await axios({
+        method: 'get',
+        url: 'https://data.secretswap.net/apps/ss/config_mainnet.json',
+      });
+
+      
+  return fetcherConfigs.data;
 };
 
-const divDecimals = (amount, decimals) => {
-  if (decimals === 0) {
-    return amount;
+const calculateApr = (rewards) => {
+
+  let apr = 0;
+
+  if (rewards?.infinityPoolContract) {
+    const numStaked = rewards?.infinityPoolContract.total_locked
+    const sefiPrice = rewards?.infinityPoolContract.inc_token.price
+    const alterPrice = rewards?.alterTokenContract.price
+
+    try {
+      apr = (365 * 103561.64) / (numStaked / 1000000)
+      if (alterPrice) {
+          apr += ((100000 * 2) * alterPrice) / ((numStaked / 1000000) * sefiPrice)
+        }
+    } catch (err) {
+      console.log(err);
+      apr = 0
+    }
   }
 
-  const decimalsMul = `10${new Array(decimals).join('0')}`;
-  const amountStr = new BigNumber(amount).dividedBy(decimalsMul);
-
-  return amountStr.toFixed();
-};
-
-const calculateApr = (token, price) => {
-  // deadline - current time, 6 seconds per block
-  const timeRemaining = (token.deadline - 128730) * 6.22 + 1632380505 - Math.round(Date.now() / 1000);
-  const pending = divDecimals(token.remainingLockedRewards, token.rewardsDecimals) * price;
-  const locked = token.totalLockedRewards;
-  return (((pending * 100) / locked) * (3.154e7 / timeRemaining)).toFixed(0);
+  return apr
 };
 
 export const getResults = async () => {
-  const rewards = await getRewardsInfo({ page: 0, size: 1000 })
-  const filtered = rewards.content.filter(t => t.pool_address === "secret1knars62aly28xkqxe8xeqtf7ans8hqxgm6a05k" || t.inc_token.symbol === "LP-sSCRT-SEFI")
-  const results = []
-  filtered.forEach(token => {
-      const salted = {
-        totalLockedRewards: divDecimals(
-          token.total_locked * token.inc_token.price,
-          token.inc_token.decimals,
-        ),
-        rewardsDecimals: token.rewards_token.decimals,
-        price: token.inc_token.price,
-        rewardsPrice: token.rewards_token.price,
-        remainingLockedRewards: token.pending_rewards,
-        deadline: token.deadline,
-      }
-      const apr = calculateApr(salted, salted.rewardsPrice)
-      if(token.deprecated_by) {
-      } else {
-        results.push({ symbol: token.inc_token.symbol, apr})
-      }
-  })
+  
+  const rewards = await getRewardsInfo()
 
-  return results
+  return calculateApr(rewards)
 }
 
 export const getStats = async () => {
     const getApr = await getResults();
-    const lpSefisScrtApr = parseFloat(getApr[0].apr);
-    const lpSefisScrtApy = Number((Math.pow(1 + lpSefisScrtApr.toFixed(0) / 100 / 365, 365) - 1) * 100);
-    const sefiApr = parseFloat(getApr[1].apr);
-    const sefiApy = Number((Math.pow(1 + sefiApr.toFixed(0) / 100 / 365, 365) - 1) * 100);
+    const sefiApr = parseFloat(getApr);
+
     const time = new Date().getTime();
 
     const statsData = await axios({
@@ -135,9 +118,6 @@ export const getStats = async () => {
 
     const stats = {
         sefiApr:"",
-        sefiApy:"",
-        lpSefisScrtApr: "",
-        lpSefisScrtApy: "",
         dailyFees: "",
         liquidity: "",
         pairs: "",
@@ -146,14 +126,8 @@ export const getStats = async () => {
         dailyVolume: ""
     }
 
-    stats.sefiApr = numeral(sefiApr / 100).format(getPercentageFormat(sefiApr / 100)).toString()
+    stats.sefiApr = numeral(sefiApr).format(getPercentageFormat(sefiApr / 100)).toString()
         .toUpperCase();
-    stats.sefiApy = numeral(sefiApy / 100).format(getPercentageFormat(sefiApy / 100)).toString()
-        .toUpperCase();
-    stats.lpSefisScrtApr = numeral(lpSefisScrtApr / 100).format(getPercentageFormat(lpSefisScrtApr /
-        100)).toString().toUpperCase();
-    stats.lpSefisScrtApy = numeral(lpSefisScrtApy / 100).format(getPercentageFormat(lpSefisScrtApy /
-        100)).toString().toUpperCase();
     stats.dailyFees = numeral(fees).format(getCurrencyFormat(fees)).toString().toUpperCase();
     stats.liquidity = numeral(liquidity).format(getCurrencyFormat(liquidity)).toString()
         .toUpperCase();

@@ -15,7 +15,7 @@ function App() {
         <Header />
         <SideNav />
         <Routes>
-          <Route path='/' element={<BaseContainer />} />
+          <Route path='*' element={<BaseContainer />} />
           <Route path='/faq' element={<FaqPage />} />
         </Routes>
         <Footer />

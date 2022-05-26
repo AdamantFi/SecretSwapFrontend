@@ -252,26 +252,23 @@
 }
 
 .hero-use-app-group {
-  align-items: flex-start;
-  background-image: url(/public/assets/hero-use-app.png);
-  background-position: 70% 50%;
-  background-size: cover;
+  background-image: url(/public/assets/bridge-background.png);
+  background-position: 50% 50%;
+  background-size: 120%;
   border-radius: 16px;
   border: 2px solid var(--primary-color);
-  /* box-shadow: 0 10px 10px -2px var(--primary-color); */
   display: flex;
   flex-direction: column;
-  left: 0;
-  padding: 1rem 1rem 0rem 2rem;
-  position: absolute;
-  top: 0;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
 }
 
 .hero-use-app-group > div > img {
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
+  margin: 0.75rem
 }
 
 .hero-use-app-text.animate-enter {
@@ -284,13 +281,8 @@
   flex: 1;
   letter-spacing: 0;
   line-height: 2rem;
-  margin-left: 1.2rem;
   white-space: nowrap;
   font-size: 1.5rem;
-}
-
-.hero-use-app-btn {
-  margin-left: 2rem;
 }
 
 /* css for hero cta (social media icon, learn more and buy scrt */
@@ -301,12 +293,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 1rem 1rem 0rem 1rem;
+  padding: 0rem 1rem;
   margin-top: 1rem;
 }
 
 .hero-cta-group > .btn-app {
-  margin: 0rem 0.8rem;
+  margin: 1rem 0.8rem 0;
 }
 
 .btn-icon {
@@ -362,6 +354,17 @@
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .hero-cta-group {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hero-cta-group > .social-media-group {
+    margin-top: 1rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .hero-overlap-group {
     flex-direction: column;
@@ -378,6 +381,58 @@
 
   .hero-title {
     margin-right: 0rem;
+  }
+
+  .background-glow {
+    width: 100%;
+    height: 85vw;
+  }
+
+  .hero-use-app {
+    width: 100%;
+  }
+
+  .hero-use-app-text {
+    font-size: 1.25rem;
+  }
+
+  .hero-cta-group > .btn-app {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-cta-group > .btn-app.secondary {
+    margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero-title {
+    text-align: center;
+    margin: 0.5rem 1rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin: 0.5rem 1rem;
+  }
+
+  .hero-stats-container {
+    margin: 1rem 0;
+  }
+
+  .hero-stat-group {
+    height: 7rem;
+    width: 6.3rem;
+    margin: 0px 5px;
+  }
+
+  #hero-stats-row-2 {
+    margin-top: -1.5rem;
+  }
+
+  .hero-label {
+    font-size: 0.75rem;
   }
 }
 

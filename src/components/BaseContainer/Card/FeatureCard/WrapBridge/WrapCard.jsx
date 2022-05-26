@@ -9,7 +9,7 @@ function WrapCard() {
             <div className='ibc-group'>
                 <div className='ibc-wrap-top'>
                     <div className='ibc-logos'>
-                        <img src="/assets/luna-logo-3d.png" alt="Luna Logo" />
+                        <img src="/assets/dvpn-logo-3d.png" alt="DVPN Logo" />
                         <img src="/assets/atom-logo-3d.png" alt="Atom Logo" />
                         <img src="/assets/osmo-logo-3d.png" alt="Osmo Logo" />
                     </div>

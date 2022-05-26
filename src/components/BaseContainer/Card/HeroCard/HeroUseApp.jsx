@@ -6,7 +6,7 @@ function HeroUseApp() {
         <div className="hero-use-app-group">
             <div className="animate-enter">
                 <h1 className="hero-use-app-text">
-                    New Assets
+                    Native SNIP-20 Assets
                 </h1>
             </div>
             <div className="animate-enter">

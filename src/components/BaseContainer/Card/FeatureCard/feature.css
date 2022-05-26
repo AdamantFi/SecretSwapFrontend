@@ -11,16 +11,6 @@
   opacity: 0;
 }
 
-.feature-card > .hydro-group {
-  max-height: 500px;
-  width: 100%;
-}
-
-.feature-card > .wrap-bridge {
-  max-height: 600px;
-  width: 100%;
-}
-
 .feature-group {
   display: flex;
   align-items: center;
@@ -38,6 +28,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  max-height: 500px;
+  width: 100%;
 }
 
 .hydro-top {
@@ -55,6 +47,7 @@
   font-size: 2rem;
   padding: 20px;
   text-align: center;
+  font-weight: 300;
 }
 
 .hydro-bottom {
@@ -88,6 +81,7 @@
 
 .wrap-bridge {
   width: 48%;
+  max-height: 600px;
 }
 
 .wrap-bridge-group {
@@ -108,7 +102,8 @@
 }
 
 .ibc-wrap-top {
-  margin: 25px 0px 25px 20px;
+  margin-left: 20px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -134,7 +129,7 @@
 }
 
 .ibc-wrap-middle {
-  margin: 25px 0px;
+  margin-top: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -240,8 +235,12 @@
     flex-direction: column;
   }
 
+  .wrap-bridge-group > .btn-app {
+    margin: 20px auto;
+  }
+
   .wrap-bridge {
-    width: 80%;
+    width: 100%;
     margin-bottom: 40px;
   }
 
@@ -261,16 +260,13 @@
   }
 
   .feature-card-title {
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    margin: 0.5rem auto;
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 1040px) {
-  .feature-card > .hydro-group {
-    width: 80%;
-  }
 
   #hydro-card-title {
     display: none;
@@ -314,14 +310,33 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .feature-non-first {
+    margin-top: 40px;
+  }
+
+  .hydro-group {
+    height: 550px;
+    max-height: 550px;
+  }
+
   .ibc-wrap-top, .ibc-wrap-middle {
     flex-direction: column;
     align-items: center;
   }
 
+  .ibc-wrap-top {
+    height: auto;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .ibc-wrap-top > img {
+    display: none;
+  }
+
   .ibc-logos {
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
     justify-content: space-around;
   }
 
@@ -341,6 +356,7 @@
 
   .ibc-wrap-middle > p {
     text-align: center;
+    padding-left: 0;
   }
 
   .ibc-wrap-middle > img {
@@ -362,9 +378,18 @@
     align-items: center;
   }
 
+  .bridge-left {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  .bridge-left > img {
+    display: none;
+  }
+
   .bridge-right > img:not(.bridge-bar, .icon) {
     width: 60%;
-    margin: -20px 0px 10px 0px;
+    margin: 0.5rem 0;
   }
 
   .bridge-right > .icon {

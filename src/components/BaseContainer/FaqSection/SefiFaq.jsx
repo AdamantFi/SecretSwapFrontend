@@ -6,7 +6,7 @@ function SefiFaq() {
     <div className="tabs">
         <div className="tab">
             <input type="checkbox" id='sefi-check1' className='faq-input'></input>
-            <label className="tab-label" htmlFor='sefi-check1'>What is SEFI?</label>
+            <label className="tab-label first-tab" htmlFor='sefi-check1'>What is SEFI?</label>
             <div className="tab-content">
                 SEFI is the governance token for SecretSwap and the Secret DeFi ecosystem. Users of SecretSwap can earn SEFI to participate in shaping the future of the first front-running resistant, privacy-first open financial system. SEFI is a SNIP-20 or Secret Token, which means all SEFI transactions and contract interactions are private.
             </div>
@@ -62,7 +62,7 @@ function SefiFaq() {
       </div>
       <div className="tab">
         <input type="checkbox" id='sefi-check9' className='faq-input'></input>
-        <label className="tab-label" htmlFor='sefi-check9'>How is the price of SEFI determined at the beginning?</label>
+        <label className="tab-label last-tab" htmlFor='sefi-check9'>How is the price of SEFI determined at the beginning?</label>
         <div className="tab-content">
           The price of SEFI will be determined by market forces of demand and supply.
         </div>

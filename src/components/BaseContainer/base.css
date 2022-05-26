@@ -1,5 +1,5 @@
 .base-window {
-  margin: 120px 3.6vw 40px 15vw;
+  margin: 120px 3.6vw 40px min(max(15vw, calc(120px + 3.6vw)), calc(150px + 3.6vw));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,7 +99,7 @@
 
 @media only screen and (min-width: 1500px) {
   .base-window {
-    margin: 100px 0px 0px 160px;
+    margin: 120px 0px 0px 160px;
   }
 }
 
