@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import '../feature.css'
 
@@ -22,7 +23,7 @@ function WrapCard() {
                     <img src="/assets/scrt-logo-3d.png" alt="Scrt Logo" />
                 </div>
             </div>
-            <a className='btn-app btn-feature' href='https://wrap.scrt.network'>Wrap IBC Assets</a>
+            <a className='btn-app btn-feature' href='https://wrap.scrt.network' target="_blank">Wrap IBC Assets</a>
         </div>
     </div>
   )

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import '../feature.css'
 
@@ -23,7 +24,7 @@ function BridgeCard() {
               <img src="/assets/scrt-eth-bridge.png" alt="sETH" />
           </div>
         </div>
-        <a className='btn-app btn-ibc-wrap' href='https://bridge.scrt.network'>Bridge Assets</a>
+        <a className='btn-app btn-ibc-wrap' href='https://bridge.scrt.network' target="_blank">Bridge Assets</a>
       </div>
     </div>
   )

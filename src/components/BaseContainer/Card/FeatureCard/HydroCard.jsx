@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import './feature.css'
 
@@ -14,7 +15,7 @@ function HydroCard() {
           <div></div>
           <div className='hydro-info'>
             <img src="/assets/hydro-title.png" alt="Title" />
-            <a className='btn-app secondary' href="/">Learn More</a>
+            <a className='btn-app secondary' href="https://hydro.finance/" target="_blank">Learn More</a>
           </div>
         </div>
       </div>

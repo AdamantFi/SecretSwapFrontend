@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 
 function HeroUseApp() {
@@ -14,7 +15,7 @@ function HeroUseApp() {
                 <img src="/assets/shade-logo.png" alt='Shade Logo'/>
             </div>
             <div className="animate-enter">
-                <a className="btn-app btn-shrink hero-use-app-btn" href="https://app.secretswap.net/swap">
+                <a className="btn-app btn-shrink hero-use-app-btn" href="https://app.secretswap.net/swap" target="_blank">
                     Swap Now
                 </a>
             </div>

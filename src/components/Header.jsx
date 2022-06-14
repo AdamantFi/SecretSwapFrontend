@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, {useContext} from 'react';
 import './../index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -47,7 +48,7 @@ const Header = (props) => {
                 <img src='/assets/scrt_price_logo.png' alt='SCRT Price Logo'></img>
                 <strong>SCRT ${scrt}</strong>
             </div>
-            <a className='btn-app' href='https://app.secretswap.net/swap'>LAUNCH APP</a>
+            <a className='btn-app' href='https://app.secretswap.net/swap' target="_blank">LAUNCH APP</a>
         </div>
     </div>
     </>
