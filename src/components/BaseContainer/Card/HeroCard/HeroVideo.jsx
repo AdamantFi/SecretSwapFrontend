@@ -4,8 +4,8 @@ import './hero.css'
 function HeroVideo() {
 
   return (
-    <div className="background-glow animate-enter">
-        <div className="video animate-enter">
+    <div className="background-glow animate-from-right">
+        <div className="video">
             <video
             src="https://cdn.animaapp.com/projects/622953a0a997594c4e216441/files/v3-1.mp4"
             loop

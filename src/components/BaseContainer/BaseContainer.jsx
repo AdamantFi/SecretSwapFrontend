@@ -7,6 +7,7 @@ import WrapBridgeCard from './Card/FeatureCard/WrapBridge/WrapBridgeCard'
 import './base.css'
 
 function BaseContainer() {
+
   return (
     <div className='base-window'>
       <div className='base-container' id='base'>

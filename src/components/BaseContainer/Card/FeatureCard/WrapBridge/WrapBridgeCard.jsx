@@ -2,15 +2,18 @@ import React from 'react'
 import BridgeCard from './BridgeCard'
 import WrapCard from './WrapCard'
 import '../feature.css'
+import FadeInSection from '../../../../Utils/FadeInSection'
 
 function WrapBridgeCard() {
   return (
-    <div className='feature-card feature-non-first'>
-      <div className="feature-group wrap-bridge-container animate-enter">
-        <WrapCard />
-        <BridgeCard />
+    <FadeInSection>
+      <div className='feature-card feature-non-first'>
+        <div className="feature-group wrap-bridge-container">
+          <WrapCard />
+          <BridgeCard />
+        </div>
       </div>
-    </div>
+    </FadeInSection>
   )
 }
 

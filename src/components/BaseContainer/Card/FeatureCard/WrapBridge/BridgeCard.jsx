@@ -6,7 +6,7 @@ function BridgeCard() {
   return (
     <div className='wrap-bridge'>
       <h1 className='feature-card-title'>BRIDGE ASSETS</h1>
-      <div className="wrap-bridge-group animate-enter">
+      <div className="wrap-bridge-group">
         <div className='bridge-group'>
           <div className='bridge-left'>
               <div className='bridge-logos'>

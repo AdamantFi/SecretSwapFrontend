@@ -7,7 +7,7 @@ function Hero() {
   const {stat: {sefiApr, liquidity, pairs, users, dailyVolume} } = useContext(AppContext)
 
   return (
-    <div className="landing-image animate-enter">
+    <div className="landing-image animate-from-left">
       <div className="hero-overlap-group">
         <div className="hero-intro">
           <img className='bridge-bar' src="/assets/bridge-bar.png" alt="Bar" />

@@ -6,7 +6,7 @@ function WrapCard() {
   return (
       <div className='wrap-bridge'>
         <h1 className='feature-card-title'>WRAP ASSETS</h1>
-        <div className="wrap-bridge-group animate-enter">
+        <div className="wrap-bridge-group">
             <div className='ibc-group'>
                 <div className='ibc-wrap-top'>
                     <div className='ibc-logos'>
@@ -23,7 +23,7 @@ function WrapCard() {
                     <img src="/assets/scrt-logo-3d.png" alt="Scrt Logo" />
                 </div>
             </div>
-            <a className='btn-app btn-feature' href='https://wrap.scrt.network' target="_blank">Wrap IBC Assets</a>
+            <a className='btn-app btn-ibc-wrap' href='https://wrap.scrt.network' target="_blank">Wrap IBC Assets</a>
         </div>
     </div>
   )

@@ -1,20 +1,21 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
+import './hero.css'
 
 function HeroUseApp() {
   return (
-    <div className="hero-use-app animate-enter">
+    <div className="hero-use-app animate-from-right">
         <div className="hero-use-app-group">
-            <div className="animate-enter">
+            <div >
                 <h1 className="hero-use-app-text">
                     Native SNIP-20 Assets
                 </h1>
             </div>
-            <div className="animate-enter">
+            <div>
                 <img src="/assets/alter-logo.png" alt='Alter Logo'/>
                 <img src="/assets/shade-logo.png" alt='Shade Logo'/>
             </div>
-            <div className="animate-enter">
+            <div>
                 <a className="btn-app btn-shrink hero-use-app-btn" href="https://app.secretswap.net/swap" target="_blank">
                     Swap Now
                 </a>

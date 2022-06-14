@@ -2,11 +2,10 @@
 import React from 'react'
 import SocialMedia from '../../../Utils/SocialMedia'
 import './hero.css'
-import '../../../../index.css'
 
 function HeroCTA() {
   return (
-    <div className='hero-cta-group'>
+    <div className='hero-cta-group animate-from-left'>
         <a className="btn-app btn-shrink solid secondary btn-expand" href="https://app.secretswap.net/swap" target="_blank">
             Buy SCRT
             <img className='btn-icon' src="/assets/gem-icon.png" alt="Right Arrow Icon" />

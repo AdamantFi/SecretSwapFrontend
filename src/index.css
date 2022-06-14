@@ -7,7 +7,7 @@
   --background-color: linear-gradient(#131212, #242424, #131212);
   --header-background-color: linear-gradient(#000000, #242424);
   --faq-row-color: #242424;
-  --primary-font-color: #fff;
+  --primary-font-color: #ddd;
   --secondary-font-color: #3ba246;
   --overlay-color: rgba(36, 36, 36, 0.9);
   --menu-speed: 0.75s;
@@ -82,7 +82,7 @@ body {
 .btn-app {
   background-color:#242424; 
   color: var(--primary-font-color);
-  border: solid var(--primary-btn-color);
+  border: 1px solid var(--primary-btn-color);
   border-radius: 6px;
   cursor: pointer;
   text-decoration: none;
@@ -104,7 +104,7 @@ body {
 }
 
 .btn-app.secondary {
-  border: solid var(--secondary-btn-color);
+  border: 1px solid var(--secondary-btn-color);
 }
 
 .btn-app.secondary:hover {
@@ -235,6 +235,64 @@ body {
   transform: scale(1.2);
 }
 
+.animate-from-left {
+  animation: animate-from-left-frames 3s ease 0s 1 normal forwards;
+}
+
+@keyframes animate-from-left-frames {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translate(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(0px);
+  }
+}
+
+.animate-from-right {
+  animation: animate-from-right-frames 3s ease 0s 1 normal forwards;
+}
+
+@keyframes animate-from-right-frames {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translate(100px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(0px);
+  }
+}
+
+.animate-from-below {
+  animation: animate-from-below-frames 3s ease 0s 1 normal forwards;
+}
+
+@keyframes animate-from-below-frames {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translate(0, 100px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translate(0px);
+  }
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 @media only screen and (max-width: 1050px) {
   .footer {
     margin-top: 30px;
@@ -273,6 +331,24 @@ body {
   .footer {
     width: 100%;
     margin-left: 0px;
+  }
+
+  .footer-secured-by > h3 {
+    font-size: 1rem;
+  }
+
+  .footer-icon {
+    height: 18px;
+    width: auto;
+  }
+
+  .footer-logo {
+    height: 40px;
+    width: auto;
+  }
+
+  .btn-app {
+    min-width: 140px;
   }
 }
 
