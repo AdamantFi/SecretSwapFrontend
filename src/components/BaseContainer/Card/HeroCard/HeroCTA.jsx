@@ -10,7 +10,7 @@ function HeroCTA() {
             Buy SCRT
             <img className='btn-icon' src="/assets/gem-icon.png" alt="Right Arrow Icon" />
         </a>
-        <a className="btn-app btn-shrink solid btn-expand" href="https://docs.secretswap.net/" target="_blank">
+        <a className="btn-app btn-shrink solid btn-expand" href="https://app.secretswap.net/swap" target="_blank">
             Swap Now
             <img className='btn-icon' src="/assets/right-arrow-icon.png" alt="Right Arrow Icon" />
         </a>
