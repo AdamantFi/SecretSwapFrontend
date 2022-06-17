@@ -1,7 +1,6 @@
 @import url(/src/index.css);
 
 .faq {
-  margin: 120px 3.6vw 40px min(max(15vw, calc(120px + 3.6vw)), calc(150px + 3.6vw));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,10 +132,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .faq {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
 
   .faq-sections > a {
     font-size: 24px;
