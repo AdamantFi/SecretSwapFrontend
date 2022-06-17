@@ -1,3 +1,4 @@
+import React from 'react'
 import BaseContainer from '../components/BaseContainer/BaseContainer'
 import '../components/BaseContainer/FaqSection/faq.css'
 import GeneralFaq from '../components/BaseContainer/FaqSection/GeneralFaq'
