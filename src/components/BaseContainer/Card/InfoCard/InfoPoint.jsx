@@ -1,4 +1,5 @@
 import './info.css'
+import React from 'react'
 import Lottie from 'react-lottie-player';
 
 function InfoPoint({title, text, lottieSrc}) {
