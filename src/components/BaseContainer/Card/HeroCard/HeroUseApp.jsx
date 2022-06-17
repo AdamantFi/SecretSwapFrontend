@@ -16,8 +16,8 @@ function HeroUseApp() {
                 <img src="/assets/shade-logo.png" alt='Shade Logo'/>
             </div>
             <div>
-                <a className="btn-app btn-shrink hero-use-app-btn" href="https://app.secretswap.net/swap" target="_blank">
-                    Swap Now
+                <a className="btn-app hero-use-app-btn" href="https://app.secretswap.net/pool#Provide" target="_blank">
+                    Provide Liquidity
                 </a>
             </div>
         </div>
