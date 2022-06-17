@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import FaqPage from './pages/FaqPage';
 import { AppProvider } from './contexts/AppContext';
 import Landing from './pages/Landing';
+import React from 'react'
 
 function App() {
 
