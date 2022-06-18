@@ -12,7 +12,7 @@ function Hero() {
         <div className="hero-intro">
           <img className='bridge-bar' src="/assets/bridge-bar.png" alt="Bar" />
           <h1 className="hero-title">A Better Way to Trade</h1>
-          <p className="hero-text">Welcome to the first front-running resistant
+          <p className="hero-text">Welcome to the first front-running resistant,
           cross-chain and privacy-first AMM</p>
           <div className="hero-stats-container">
             <div id="hero-stats-row-1">
