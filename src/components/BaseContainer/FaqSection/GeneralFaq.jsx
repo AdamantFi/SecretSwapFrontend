@@ -8,7 +8,7 @@ function GeneralFaq() {
             <input type="checkbox" id='general-check1' className='faq-input'></input>
             <label className="tab-label first-tab" htmlFor='general-check1'>What is Secret Swap?</label>
             <div className="tab-content">
-                Secret Swap is a protocol for creating liquidity and trading SNIP-20 tokens on Secret Network. Leveraging secret contracts, Secret Swap protects users against malicious front-running and privacy threats, provides access to cross-chain liquidity, and reduces fees relative to Ethereum.
+                Secret Swap is a protocol for creating liquidity and trading SNIP-20 tokens on Secret Network. Leveraging secret contracts, Secret Swap protects users against malicious front-running and privacy threats, provides access to cross chain liquidity, and reduces fees relative to Ethereum.
             </div>
       </div>
       <div className="tab">

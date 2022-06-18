@@ -40,7 +40,7 @@ export const AppProvider = ({children}) => {
         const asyncWrapper = async () => {
             const prices = await getPriceData();
             setPrice({sefi: roundSefiPrice(prices["SEFI/USDT"]["price"], 4),
-                    scrt: prices["SCRT/USD"]["price"]})
+                    scrt: roundSefiPrice(prices["SCRT/USD"]["price"], 3)})
             const stats = await getStats()
             setStat(stats)
         }

@@ -7,7 +7,7 @@ function Footer() {
         <SocialMedia />
         <div className='footer-secured-by'>
             <img className='footer-icon' src="/assets/secured-by-icon.png" alt="Secured By Icon" />
-            <h3>- secured by </h3>
+            <h3>secured by </h3>
             <img className='footer-logo' src="/assets/secret-network-logo.png" alt="Secret Network Logo" />
         </div>
     </div>

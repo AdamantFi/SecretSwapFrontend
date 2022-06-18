@@ -37,16 +37,16 @@ const Header = (props) => {
     <div className='header' id='header'>
         <div className='header-left'>
             <FontAwesomeIcon icon={faBars} className='hamburger-menu' id="hamburger" onClick={doNothing}/>
-            <a href="/"><img src='/assets/sefi_logo.png' alt='SeFi Logo'></img></a>
+            <a href="/"><img src='/assets/secret-swap-light.png' alt='SeFi Logo'></img></a>
         </div>
         <div className='header-right'>
-            <div>
-                <img src='/assets/sefi_price_logo.png' alt='SeFi Price Logo'></img>
-                <strong>SEFI ${sefi}</strong>
+            <div className="pricing">
+                <img src='/assets/price-logo-sefi.png' alt='SeFi Price Logo'></img>
+                <span className="token">SEFI</span> ${sefi}
             </div>
-            <div>
-                <img src='/assets/scrt_price_logo.png' alt='SCRT Price Logo'></img>
-                <strong>SCRT ${scrt}</strong>
+            <div className="pricing">
+                <img src='/assets/price-logo-scrt.png' alt='SCRT Price Logo'></img>
+                <span className="token">SCRT</span> ${scrt}
             </div>
             <a className='btn-app' href='https://app.secretswap.net/swap' target="_blank">LAUNCH APP</a>
         </div>

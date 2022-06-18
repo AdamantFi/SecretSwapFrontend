@@ -8,7 +8,7 @@ function SefiFaq() {
             <input type="checkbox" id='sefi-check1' className='faq-input'></input>
             <label className="tab-label first-tab" htmlFor='sefi-check1'>What is SEFI?</label>
             <div className="tab-content">
-                SEFI is the governance token for SecretSwap and the Secret DeFi ecosystem. Users of SecretSwap can earn SEFI to participate in shaping the future of the first front-running resistant, privacy-first open financial system. SEFI is a SNIP-20 or Secret Token, which means all SEFI transactions and contract interactions are private.
+                SEFI is the governance token for SecretSwap and the Secret DeFi ecosystem. Users of SecretSwap can earn SEFI to participate in shaping the future of the first front-running resistant, privacy first open financial system. SEFI is a SNIP-20 or Secret Token, which means all SEFI transactions and contract interactions are private.
             </div>
       </div>
       <div className="tab">

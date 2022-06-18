@@ -11,7 +11,7 @@ function HydroCard() {
         <div className='hydro-group'>
           <div className='hydro-top'>
             <img src="/assets/hydro-title.png" alt="Title" />
-            <p>Unlocking the Liquidity of the Cosmos</p>
+            <p>Unlocking Cosmos Liquidity</p>
           </div>
           <div className='hydro-bottom'>
             <div></div>

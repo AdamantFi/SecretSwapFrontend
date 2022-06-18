@@ -18,7 +18,7 @@ function WrapCard() {
                 </div>
                 <div className='ibc-wrap-middle'>
                     <p>
-                        Wrapping Coins as Secret Tokens immediately supercharges them with private balances and private transfers.
+                        Wrapping coins as Secret tokens immediately supercharges them with private balances and private transfers
                     </p>
                     <img src="/assets/scrt-logo-3d.png" alt="Scrt Logo" />
                 </div>
