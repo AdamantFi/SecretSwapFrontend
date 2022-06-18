@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React, {useContext} from 'react';
-import './../index.css';
+import React, {useContext} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import AppContext from '../contexts/AppContext';

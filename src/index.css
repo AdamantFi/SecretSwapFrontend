@@ -57,7 +57,7 @@ body {
 }
 
 .header-left > a > img {
-  height: 40px;
+  height: 35px;
   margin: 0 1rem;
 }
 
@@ -340,8 +340,8 @@ body {
   }
 
   .header-left > a > img {
-    margin-left: 0;
-    height: 35px;
+    margin: 0;
+    height: 30px;
   }
 
   .footer {

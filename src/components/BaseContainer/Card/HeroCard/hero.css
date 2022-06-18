@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 58%;
+  width: 65%;
 }
 
 .hero-right {
@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  width: 42%;
+  width: 480px;
 }
 
 .landing-image {
@@ -37,7 +37,6 @@
   background-position: 50% 50%;
   border-radius: 16px;
   border: 2px solid var(--primary-color);
-  box-shadow: 0 10px 10px -2px var(--primary-color);
   z-index: 3;
   display: flex;
   flex-direction: row;
@@ -160,50 +159,17 @@
 }
 
 /* css for video */
-
-.background-glow {
-  margin: 0.2rem 0 1rem 2.5rem;
-  background-color: var(--primary-color);
-  background-clip: content-box;
-  width: calc(100%-2.5rem);
-  height: 64%;
-  border-radius: 10px;
-}
-
-.background-glow:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-}
-
-.background-glow:after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  z-index: -2;
-  filter: blur(6px);
-}
-
-.background-glow:before, .background-glow:after {
-  background: linear-gradient(0.25turn, var(--primary-color), var(--primary-color), var(--primary-color));
-}
-
-/* define video dimensions in front of background glow box */
 .video {
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  width: calc(100% - 2.5rem);
+  max-width: 500px;
+  margin-left: 2.5rem;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
 }
 
 /* force video to stay in fixed box */
 .video video {
-  height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   border-radius: 10px;
 }
@@ -228,6 +194,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  padding: 1rem;
 }
 
 .hero-use-app-group > div > img {
@@ -252,9 +219,9 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0rem 1rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .hero-cta-group > .btn-app {
@@ -271,7 +238,7 @@
   gap: 0.2rem;
 }
 
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1200px) {
   .hero-content {
     flex-direction: column;
     margin-bottom: 50px;
@@ -279,6 +246,8 @@
 
   .hero-left {
     width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
   }
 
   .hero-right {
@@ -289,14 +258,17 @@
     margin: 1rem auto;
   }
 
+  .video {
+    width: auto;
+  }
+
   .background-glow {
     height: 450px;
     width: 450px;
   }
 
   .hero-use-app {
-    height: 215px;
-    width: 450px;
+    width: 500px;
   }
 
   #hero-stats-row-2 {
