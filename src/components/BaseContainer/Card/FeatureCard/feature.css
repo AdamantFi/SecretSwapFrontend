@@ -19,6 +19,7 @@
   background-size: cover;
   border-radius: 16px;
   border: 2px solid var(--primary-color);
+  box-shadow: 0 10px 10px -2px var(--primary-color);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -84,6 +85,7 @@
   background-size: 1000px;
   border-radius: 16px;
   border: 2px solid var(--primary-color);
+  box-shadow: 0 10px 10px -2px var(--primary-color);
 }
 
 .ibc-group {
@@ -256,8 +258,8 @@
   }
 
   .hydro-group {
-    height: 500px;   
-    justify-content: space-between; 
+    height: 500px;
+    justify-content: space-between;
     margin: auto;
   }
 

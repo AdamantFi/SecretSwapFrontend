@@ -21,7 +21,7 @@
 .hero-right {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: self-end;
   justify-content: flex-start;
   width: 480px;
 }
@@ -37,6 +37,7 @@
   background-position: 50% 50%;
   border-radius: 16px;
   border: 2px solid var(--primary-color);
+  box-shadow: 0 10px 10px -2px var(--primary-color);
   z-index: 3;
   display: flex;
   flex-direction: row;
@@ -160,26 +161,28 @@
 
 /* css for video */
 .video {
-  width: calc(100% - 2.5rem);
+  width: calc(100% - 4.5rem);
   max-width: 500px;
   margin-left: 2.5rem;
-  border-radius: 10px;
+  border-radius: 16px;
   border: 2px solid var(--primary-color);
+  box-shadow: 0 10px 10px -2px var(--primary-color);
 }
 
 /* force video to stay in fixed box */
 .video video {
   object-fit: contain;
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  border-radius: 16px;
 }
 
 /* css for use app */
 
 .hero-use-app {
-  width: calc(100% - 2.5rem);
+  width: calc(100% - 4.5rem);
   height: 35%;
-  margin: 1rem 0 2rem 2.5rem;
+  margin: 2rem 0 2rem 2.5rem;
 }
 
 .hero-use-app-group {
@@ -188,6 +191,7 @@
   background-size: 120%;
   border-radius: 16px;
   border: 2px solid var(--primary-color);
+  box-shadow: 0 10px 10px -2px var(--primary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
