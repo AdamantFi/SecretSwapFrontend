@@ -61,7 +61,7 @@ const getPercentageFormat = (number) => {
 const getRewardsInfo = async (params) => {
   const fetcherConfigs = await axios({
         method: 'get',
-        url: 'https://data.secretswap.net/apps/ss/config_mainnet.json',
+        url: `${REACT_APP_DATA_ENDPOINT}/config_mainnet.json`,
       });
 
       
@@ -106,7 +106,7 @@ export const getStats = async () => {
 
     const statsData = await axios({
         method: 'get',
-        url: 'https://storage.googleapis.com/astronaut/sefi.json?time=' + time
+        url: `${process.env.REACT_APP_STATS_ENDPOINT}/sefi.json?time=` + time
     });
 
     const fees = parseFloat(statsData.data.fees);

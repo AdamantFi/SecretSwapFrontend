@@ -5,7 +5,7 @@ import { getStats } from "../utils/apr";
 export async function getPriceData() {
   const statsData = await axios({
     method: 'get',
-    url: 'https://data.secretswap.net/apps/ss/sefi_comment.json',
+    url: `${REACT_APP_DATA_ENDPOINT}/sefi_comment.json`,
   });
   return statsData.data;
 }
